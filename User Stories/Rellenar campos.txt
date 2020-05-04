@@ -1,0 +1,11 @@
+#User Story Specification: Rellenar campos.
+
+##1.	Description
+
+
+Como usuario quiero que los campos vacios se rellenen automaticamente para que me resulte mas comodo el proceso.
+
+##2.	Acceptance Criteria
+
+-
+

@@ -1,11 +1,11 @@
-#User Story Specification: Visualizar datos
+#User Story Specification: Visualizar viajes
 
-##1.	Descripcion
+##1.	Description
 
 
 Como usuario quiero poder visualizar viajes, presentes, futuros o pasados, para tener un registro total de mis viajes.
 
-##2.	Criterio de aceptacion
+##2.	Acceptance Criteria
 
 -
 

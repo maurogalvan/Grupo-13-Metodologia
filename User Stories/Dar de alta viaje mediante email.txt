@@ -1,0 +1,11 @@
+#User Story Specification: Dar de alta viaje mediante email.
+
+##1.	Description
+
+
+Como usuario quiero poder dar de alta un viaje reenviando el mail de confirmacion de reserva de un vuelo.
+
+##2.	Acceptance Criteria
+
+- Debe extraer los datos de todos los vuelos de la reserva y cargarlo en la aplicacion.
+

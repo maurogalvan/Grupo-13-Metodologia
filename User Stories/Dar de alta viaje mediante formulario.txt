@@ -1,0 +1,11 @@
+#User Story Specification: Dar de alta viaje mediante formulario.
+
+##1.	Description
+
+
+Como usuario quiero dar de alta un viaje a travez de un formulario en la app.
+
+##2.	Acceptance Criteria
+
+-
+
