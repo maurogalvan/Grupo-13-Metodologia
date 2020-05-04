@@ -1,0 +1,12 @@
+#User Story Specification: Acceder a planes
+
+##1.	Descripcion
+
+
+Como usuario quiero poder acceder a los planes disponibles para un determinado viaje con el fin de elegir el 
+plan de preferencia.
+
+##2.	Criterio de aceptacion
+
+-
+
