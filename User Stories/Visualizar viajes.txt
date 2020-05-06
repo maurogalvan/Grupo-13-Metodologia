@@ -1,4 +1,4 @@
-#User Story Specification: Visualizar viajes
+#User Story Specification: Visualizar viajes.
 
 ##1.	Description
 

@@ -7,6 +7,5 @@ Como usuario quiero poder seguir agregando planes a mi viaje.
 
 ##2.	Acceptance Criteria
 
-- En caso de ser una reserva de hotel, si se carga a travez del reenvio de email, se debe
- ubicar automaticamente la reserva junto con un viaje existente de acuerdo con la fecha del mismo.
+- En caso de ser una reserva de hotel, si se carga a travez del reenvio de email, se debe ubicar automaticamente la reserva junto con un viaje existente de acuerdo con la fecha del mismo.
 

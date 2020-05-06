@@ -1,0 +1,10 @@
+#User Story Specification: Visualizar estadisticas globales
+
+##1.	Description
+
+
+Como grupo inversor quiero poder visualizar las estadisticas globales de los viajes de una persona para poder usar esa informacion.
+
+##2.	Acceptance Criteria
+
+-
