@@ -7,5 +7,5 @@ Como usuario quiero poder visualizar viajes, presentes, futuros o pasados, para 
 
 ##2.	Acceptance Criteria
 
--
+- Se debe poder acceder al total de viajes.
 

@@ -7,5 +7,5 @@ Como usuario quiero dar de alta un viaje a travez de un formulario en la app.
 
 ##2.	Acceptance Criteria
 
--
+- Se debe guardar los datos del viaje ingresado por el usuario.
 

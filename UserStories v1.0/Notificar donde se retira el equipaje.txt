@@ -7,4 +7,5 @@ Como usuario premiun quiero que se me notifique la cinta en la que puedo retirar
 
 ##2.	Acceptance Criteria
 
--
+- Se debe verificar que el usuario es premium.
+- Se debe notificar la cinta.

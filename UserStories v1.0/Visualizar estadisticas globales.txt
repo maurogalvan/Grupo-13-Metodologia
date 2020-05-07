@@ -7,4 +7,4 @@ Como grupo inversor quiero poder visualizar las estadisticas globales de los via
 
 ##2.	Acceptance Criteria
 
--
+- Se debe mostrar las estadisticas de cada usuario.

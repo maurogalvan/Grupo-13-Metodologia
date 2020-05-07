@@ -1,0 +1,11 @@
+#User Story Specification: Notificar cuando se abran los mostradores.
+
+##1.	Description
+
+
+Como usuario premium quiero que se me notifique cuando esten abiertos los mostradores para realizar el checkin o bagdrop.
+
+##2.	Acceptance Criteria
+
+- Se debe verificar que el usuario es premium.
+- Se debe mostrar en la notificacion el estado de los mostradores.

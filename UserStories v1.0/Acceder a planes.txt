@@ -8,5 +8,5 @@ plan de preferencia.
 
 ##2.	Acceptance Criteria
 
--
+- La aplicacion debe visualizar los planes para un determinado viaje.
 

@@ -7,4 +7,5 @@ Como usuario premium quiero que se me notifique ante cualquier alteracion en el 
 
 ##2.	Acceptance Criteria
 
--
+- Se debe verificar que el usuario es premium.
+- Se debe mostrar en la notificacion la alteracion del plan de vuelo.

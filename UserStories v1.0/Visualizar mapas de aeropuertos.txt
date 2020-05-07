@@ -7,4 +7,6 @@ Como usuario premium quiero visualizar los mapas de los aeropuertos y que se est
 
 ##2.	Acceptance Criteria
 
--
+- Se debe verificar que el usuario es premium.
+- Se debe poder generar el mapa de los aeropuertos.
+- Se debe poder generar el tiempo estimado de caminata.

@@ -7,5 +7,5 @@ Como usuario quiero poder visualizar en un mapa los puntos de interes de mi plan
 
 ##2.	Acceptance Criteria
 
--
+- Se debe poder generar un mapa con todos los puntos.
 
