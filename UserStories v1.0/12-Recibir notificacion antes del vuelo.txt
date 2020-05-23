@@ -1,0 +1,11 @@
+#User Story Specification: Recibir notificacion antes del vuelo.
+
+##1.	Description
+
+Como usuario quiero recibir una notificación antes del vuelo para no perderlo.
+
+##2.	Acceptance Criteria
+
+- La notificación debe ser emitida 24 horas antes del horario de salida del vuelo.
+- Si por cualquier error no se puede mostrar la notificación, que se le notifique al usuario para que lo verifique por su cuenta.
+

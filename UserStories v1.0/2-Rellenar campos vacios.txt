@@ -1,0 +1,14 @@
+#User Story Specification: Rellenar campos vacíos.
+
+##1.	Description
+
+
+Como usuario quiero que los campos vacíos se rellenen automáticamente para que me resulte más cómodo el proceso.
+
+##2.	Acceptance Criteria
+
+- Se deben rellenar los campos vacíos del formulario con un servicio externo.
+- Si la aplicación no se puede conectar con el servicio externo, mostrar mensaje de error.
+- Si algún campo obligatorio no se encontró en el servicio externo, que el usuario no pueda enviar el formulario sin estar relleno
+
+

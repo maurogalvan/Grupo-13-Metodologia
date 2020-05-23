@@ -1,0 +1,13 @@
+#User Story Specification: Visualizar mapa.
+
+##1.	Description
+
+Como usuario quiero poder visualizar en un mapa los puntos de interés de mi plan de viaje.
+
+##2.	Acceptance Criteria
+
+- Se debe poder generar un mapa con todos los puntos.
+- Ofrecer funcionalidades para hacer zoom in, out y moverse por el mapa cómodamente.
+- Ofrecer información de tiempo de transporte por distintos medios desde mi posición actual a los distintos puntos.
+
+

@@ -1,0 +1,12 @@
+#User Story Specification: Notificar donde se retira el equipaje.
+
+##1.	Description
+
+
+Como usuario premium quiero que se me notifique la cinta en la que puedo retirar mi equipaje para así saber donde dirigirme.
+
+##2.	Acceptance Criteria
+
+- Se debe verificar que el usuario es premium.
+- Se debe notificar la cinta.
+- La aplicación debe estar conectada con los distintos aeropuertos para poder recibir dicha información (de equipaje).

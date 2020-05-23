@@ -8,4 +8,7 @@ Como usuario quiero poder visualizar viajes, presentes, futuros o pasados, para 
 ##2.	Acceptance Criteria
 
 - Se debe poder acceder al total de viajes.
+- Si no hay viajes, o no se puede acceder a estos, mostrar el respectivo error.
+- Poder realizar distintos filtrados para limitar la búsqueda.
+- Los datos a visualizar son los mismos que el usuario ingresa al dar de alta el viaje.
 

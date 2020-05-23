@@ -1,0 +1,14 @@
+#User Story Specification: Agregar planes.
+
+##1.	Description
+
+
+Como usuario quiero poder seguir agregando planes a mi viaje.
+
+##2.	Acceptance Criteria
+
+- En caso de ser una reserva de hotel, si se carga a través del reenvío de email, se debe ubicar automáticamente la reserva junto con un viaje existente de acuerdo con la fecha del mismo.
+-No permitir agregar el plan con algún formulario obligatorio vacío.
+-Lograr almacenar el plan del viaje en la base de datos.
+
+

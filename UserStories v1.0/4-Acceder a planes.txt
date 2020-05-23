@@ -1,0 +1,21 @@
+#User Story Specification: Acceder a planes.
+
+##1.	Description
+
+
+Como usuario quiero poder acceder a los planes disponibles para un determinado viaje con el fin de elegir el plan de preferencia.
+
+##2.	Acceptance Criteria
+
+-Lograr extraer los datos de la base de datos
+-Mostrar mensaje especial si no hay planes para el viaje seleccionado.
+-La aplicación debe visualizar los planes para un determinado viaje.
+-Dar la opción de visualizar en forma de lista o de recuadros.
+-Se debe dar soporte para poder agregar comentarios extras a un plan.
+-Para cada planes se debe mostrar:
+	-Nombre del plan.
+	-Descripción del plan.
+	-Horarios de actividades.
+	-Localización de actividades.
+	-Comentarios de un plan.
+

@@ -1,0 +1,14 @@
+#User Story Specification: Visualizar estadísticas globales.
+
+##1.	Description
+
+Como grupo inversor quiero poder visualizar las estadisticas globales de los viajes de una persona para poder usar esa informacion.
+
+##2.	Acceptance Criteria
+
+- Se debe mostrar las estadísticas de cada usuario.
+- Ofrecer distintos tipos de gráficos para poder visualizar la información de mejor manera.
+- Se debe poder restringir las estadísticas obtenidas a distintas características (Ej: Usuarios solo de cierta nacionalidad, premiums, etc.).
+- De cada estadística se debe poder visualizar:
+	- El criterio o filtro.
+	- Los datos obtenidos luego de aplicar el criterio.

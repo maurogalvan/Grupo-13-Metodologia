@@ -1,0 +1,19 @@
+#User Story Specification: Dar de alta viaje mediante formulario.
+
+##1.	Description
+
+Como usuario quiero dar de alta un viaje a través de un formulario en la app.
+
+##2.	Acceptance Criteria
+
+- Se debe guardar los datos del viaje ingresado por el usuario.
+- No se debe poder dar de alta el viaje si no están completos todos los campos obligatorios.
+- Verificar que los campos tengan una forma determinada (Ej: El destino sea un lugar válido)
+- Lograr almacenar en la base de datos (o en la aplicación) la información del alta del viaje.
+- Se debe verificar que se ingresen los siguientes datos:
+	- Nombre del viaje.
+	- Ciudad/es de destino.
+	- Fecha de inicio y fin.
+	- Descripción.
+
+

@@ -1,0 +1,19 @@
+#User Story Specification: Visualizar detalles de vuelo.
+
+##1.	Description
+
+Como usuario quiero poder visualizar detalles de mis vuelos para tener mayor control.
+
+##2.	Acceptance Criteria
+
+- Se debe mostrar el detalle de los vuelos.
+- Si por alguna razón los detalles no se pueden mostrar, notificar con un error.
+- Se debe verificar que se muestran los siguientes datos:
+	- Número de vuelo.
+	- Compañía.
+	- Fecha y hora de salida y llegada.
+	- Aeropuerto de salida y de llegada.
+	- Código de reserva.
+	- Tiempo entre escalas entre vuelos (de existir).
+
+
