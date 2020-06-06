@@ -1,5 +1,6 @@
 package defect;
 
+
 import java.util.*;
 import java.util.Calendar;
 
@@ -37,18 +38,18 @@ public class Usuario {
 	 * @param misViajes Lista de todos los viajes hechos
 	 * @param premium Decisor de si un Usuario es premium o no
 	 */
-	public Usuario(String nombre, String apellido, String mail, String pais,Calendar nacimiento,boolean notificacion,
-			ArrayList<String> paisesVisitados,double kmRecorridos, ArrayList<Viaje> misViajes,boolean premium) {
+	public Usuario(String nombre, String apellido, String mail, String pais,Calendar nacimiento,boolean notificacion) 
+	{
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.mail=mail;
 		this.pais=pais;
 		this.nacimiento=nacimiento;
 		this.notificacion=notificacion;
-		this.paisesVisitados=paisesVisitados;
-		this.kmRecorridos=kmRecorridos;
-		this.misViajes=misViajes;
-		this.premium=premium;
+		this.paisesVisitados= new ArrayList <String> ();
+		this.kmRecorridos=0;
+		this.misViajes= new ArrayList <Viaje>();
+		this.premium=false;
 	}
 	
 	/**
@@ -215,7 +216,15 @@ public class Usuario {
 	 * @param vueloIda contiene un Vuelo de ida
 	 * @param vueloVuelta contiene un vuelo de vuelta
 	 */
-	public void cargarDatosViaje (TrasladoAereo vueloIda, TrasladoAereo vueloVuelta) {
+	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, String numVueloIda, String numVueloVuelta,
+			String ciudadOrigen, String ciudadDestino) {
+		
+		TrasladoAereo vueloIda= new trasladoAereo(diaIda, companiaIda, numVueloIda);
+		TrasladoAereo vueloVuelta= new trasladoAereo(diaVuelta, companiaVuelta, numVueloVuelta); //creo 
+		String origen= ciudadOrigen;
+		String destino= ciudadDestino;
+		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta);
+		misViajes.add(nuevoViaje);
 		//Hay que llamar al constructor de viaje y llamar al add
 	}
 	
