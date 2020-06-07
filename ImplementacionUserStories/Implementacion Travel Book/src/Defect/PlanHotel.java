@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package metodologia;
+package Defect;
 
 import java.util.Date;
+import java.util.*;
 
 /**
  *
@@ -17,8 +13,8 @@ public class PlanHotel extends PlanBasico {
     private Date fechaFin;
 
        // al constructor de PlanHotel le paso los atributos del padre tambien para usar el constructor con super()
-    public PlanHotel(String habitacion, Date fechaFin, Date fechainicio, String tipo, GPS ubicacion,Time comienzo) {
-        super(fechainicio,tipo,ubicacion,comienzo);
+    public PlanHotel(String habitacion, Date fechaFin, Calendar fechainicio, String tipo, String ubicacion) {
+        super(fechainicio,tipo,ubicacion);
         this.habitacion = habitacion;
         this.fechaFin = fechaFin;
     }

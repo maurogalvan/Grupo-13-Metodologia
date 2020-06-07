@@ -1,4 +1,4 @@
-package defect;
+package Defect;
 
 
 import java.util.*;
@@ -212,20 +212,19 @@ public class Usuario {
 	}
 	
 	/**
-	 * @deprecated Falta completarlo no se que es trasladoAereo
+	 * Carga los datos de un viaje
 	 * @param vueloIda contiene un Vuelo de ida
 	 * @param vueloVuelta contiene un vuelo de vuelta
 	 */
-	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, String numVueloIda, String numVueloVuelta,
-			String ciudadOrigen, String ciudadDestino) {
+	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, 
+			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino) {
 		
-		TrasladoAereo vueloIda= new trasladoAereo(diaIda, companiaIda, numVueloIda);
-		TrasladoAereo vueloVuelta= new trasladoAereo(diaVuelta, companiaVuelta, numVueloVuelta); //creo 
+		TrasladoAereo vueloIda= new TrasladoAereo(numVueloIda, companiaIda, diaIda);
+		TrasladoAereo vueloVuelta= new TrasladoAereo(numVueloVuelta, companiaVuelta, diaVuelta); 
 		String origen= ciudadOrigen;
 		String destino= ciudadDestino;
 		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta);
 		misViajes.add(nuevoViaje);
-		//Hay que llamar al constructor de viaje y llamar al add
 	}
 	
 } //Cierre de clase
