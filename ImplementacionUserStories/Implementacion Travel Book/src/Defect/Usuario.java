@@ -219,13 +219,13 @@ public class Usuario {
 	 * @param vueloVuelta contiene un vuelo de vuelta
 	 */
 	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, 
-			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino) {
+			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino,String descripcion) {
 		
 		TrasladoAereo vueloIda= new TrasladoAereo(numVueloIda, companiaIda, diaIda);
 		TrasladoAereo vueloVuelta= new TrasladoAereo(numVueloVuelta, companiaVuelta, diaVuelta); 
 		String origen= ciudadOrigen;
 		String destino= ciudadDestino;
-		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta);
+		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta, descripcion);
 		misViajes.add(nuevoViaje);
 	}
 	
