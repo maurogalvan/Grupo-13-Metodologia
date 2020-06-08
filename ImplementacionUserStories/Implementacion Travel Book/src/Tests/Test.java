@@ -3,7 +3,7 @@ package Tests;
 /**
  * Esta clase hace test de todos los servicios del paquete Defect
  * @author Mauro Galvan
- * @version 1
+ * @version 1.0
  *
  */
 

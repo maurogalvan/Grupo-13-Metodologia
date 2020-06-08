@@ -14,8 +14,8 @@ public class Viaje {
     private float tiempoEscalas;
     private Vector<PlanBasico> planes = new Vector<PlanBasico>();
     private String descripcion;
-    private Traslado trasladoIda; //PREGUNTAR
-    private Traslado trasladoVuelta; //PREGUNTAR
+    private Traslado trasladoIda; 
+    private Traslado trasladoVuelta;
     
 
     public Viaje(String origen, String destino, TrasladoAereo vueloIda, TrasladoAereo vueloVuelta) {

@@ -7,8 +7,12 @@ Como usuario quiero poder visualizar mis datos personales y de perfil para así 
 
 ##2.	Acceptance Criteria
 
-- Se debe poder ver cada uno de los datos del usuario.
+- Se debe poder ver cada uno de los datos del usuario:
+	- Nombre.
+	- Apellido.
+	- Mail.
+	- Pais.
+	- Fecha de nacimiento.
 - Se debe poder ver todos los viajes hechos.
 - Se debe poder acceder al total de viajes.
 - Si no hay viajes, o no se puede acceder a estos, mostrar el respectivo error.
-- Los datos a visualizar son los mismos que el usuario ingresa al dar de alta el viaje.

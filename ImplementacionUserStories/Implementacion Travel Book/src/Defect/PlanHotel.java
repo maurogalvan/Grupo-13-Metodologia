@@ -25,7 +25,8 @@ public class PlanHotel extends PlanBasico {
     }
     
     public String toString () {
-    	String retorno = super.toString()+"\nFecha de salida: "+this.fechaFin.get(Calendar.DAY_OF_MONTH)+"/"+
+    	String retorno = super.toString()+
+    			"\nFecha de salida: "+this.fechaFin.get(Calendar.DAY_OF_MONTH)+"/"+
     			this.fechaFin.get(Calendar.MONTH)+"/"+this.fechaFin.get(Calendar.YEAR)+"\nHabitacion numero: "+this.habitacion;
     	return retorno;
     }
@@ -40,6 +41,7 @@ public class PlanHotel extends PlanBasico {
     
     public void reenviarEmail(){
         // reenviarEmail.
+    	// Para el proximo sprint
     }
     
 }

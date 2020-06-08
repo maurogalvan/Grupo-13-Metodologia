@@ -10,8 +10,8 @@ public class TrasladoAereo extends Traslado{
 	
 
 	private static Calendar fechaRegreso = Calendar.getInstance();
-    private String aeropuertoLLegada;
-    private String aeropuertoSalida;
+    private String aeropuertoLLegada; //Proximamente sera la clase aeropuerto
+    private String aeropuertoSalida; //Proximamente sera la clase aeropuerto
     private String infoAeronave;
     private String nroVuelo;
     

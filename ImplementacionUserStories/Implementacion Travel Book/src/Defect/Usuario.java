@@ -7,7 +7,7 @@ import java.util.Calendar;
 /**
  * Esta clase genera un Usuario
  * @author Mauro Galvan
- * @version 1
+ * @version 1.0
  *
  */
 
@@ -22,7 +22,7 @@ public class Usuario {
 	private boolean notificacion;
 	private ArrayList<String> paisesVisitados;
 	private double kmRecorridos;
-	private ArrayList<Viaje> misViajes; //Hay que importar la clase viaje
+	private ArrayList<Viaje> misViajes;
 	private boolean premium;
 	
 	
