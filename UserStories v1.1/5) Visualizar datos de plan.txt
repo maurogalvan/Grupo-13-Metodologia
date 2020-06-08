@@ -6,7 +6,7 @@ Como usuario quiero poder visualizar los datos de un determinado plan.
 
 ##2.	Acceptance Criteria
 
--Se debe poder crear plan aereo consultando campos restantes a FlightStats
+-Se debe poder crear plan aéreo consultando campos restantes a FlightStats
 -Se debe poder crear un plan.
 -Se debe dar soporte para poder agregar comentarios extras a un plan.
 -Para cada planes se debe mostrar:

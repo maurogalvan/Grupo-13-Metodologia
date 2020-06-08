@@ -25,6 +25,8 @@ public class Usuario {
 	private ArrayList<Viaje> misViajes; //Hay que importar la clase viaje
 	private boolean premium;
 	
+	
+	
 	/**
 	 * Constructor de la clase Usuario
 	 * @param nombre El nombre del usuario
@@ -225,6 +227,12 @@ public class Usuario {
 		String destino= ciudadDestino;
 		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta);
 		misViajes.add(nuevoViaje);
+	}
+	
+	public String toString() {
+		String retorno = "Nombre: "+this.nombre+"\nApellido: "+this.apellido+"\nMail: "+this.mail+"\nPais: "+this.pais+
+				"\nFecha Nacimiento: "+this.nacimiento.get(Calendar.DAY_OF_MONTH)+"/"+this.nacimiento.get(Calendar.MONTH)+"/"+this.nacimiento.get(Calendar.YEAR);
+		return retorno;
 	}
 	
 } //Cierre de clase

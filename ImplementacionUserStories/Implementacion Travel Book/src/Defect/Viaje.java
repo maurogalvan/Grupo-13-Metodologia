@@ -14,6 +14,8 @@ public class Viaje {
     private float tiempoEscalas;
     private Vector<PlanBasico> planes = new Vector<PlanBasico>();
     private String descripcion;
+    
+    
 
 
     public Viaje(String origen, String destino, TrasladoAereo vueloIda, TrasladoAereo vueloVuelta) {
@@ -72,6 +74,16 @@ public class Viaje {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    
+    public String toString () {
+    	String retorno = "Origen: "+ this.origen + 
+    			"\nDestino: "+this.destino+
+    			"\nFecha inicio: "+this.fechaInicioViaje.get(Calendar.YEAR)+"/"+fechaInicioViaje.get(Calendar.MONTH)+"/"+this.fechaInicioViaje.get(Calendar.DAY_OF_MONTH)+
+    			"\nFecha fin: "+this.fechaFinViaje.get(Calendar.YEAR)+"/"+this.fechaFinViaje.get(Calendar.MONTH)+"/"+this.fechaFinViaje.get(Calendar.DAY_OF_MONTH)+
+    			"\nTiempo de escala: "+this.tiempoEscalas+
+    			"\nDescripcion: "+this.descripcion;
+    	return retorno;
     }
 
 

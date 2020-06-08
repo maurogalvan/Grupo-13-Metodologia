@@ -1,0 +1,14 @@
+#User Story Specification: Visualizar datos de Viaje.
+
+##1.	Description
+
+
+Como usuario quiero visualizar los datos de mis viajes futuros y realizados para tener un control de los planes que adquiri.
+
+
+##2.	Acceptance Criteria
+
+- Se debe poder visualizar origen y destino del viaje.
+- Se debe poder visualizar las fechas de ida y vuelta del viaje.
+- Se debe poder visualizar el tiempo de demora en escalas.
+- Se debe poder visualizar la descripción general de mi viaje.
