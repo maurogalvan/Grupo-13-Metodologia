@@ -1,0 +1,15 @@
+#User Story Specification: Modificar datos de perfil.
+
+##1.	Description
+
+
+Como usuario quiero poder modificar mis datos personales, en caso de ser necesario.
+
+##2.	Acceptance Criteria
+
+- Se debe poder cambiar cada uno de estos datos del usuario:
+	- Estado de notificaciones.
+	- Pais.
+	- Mail.
+	- Estado de premium.
+

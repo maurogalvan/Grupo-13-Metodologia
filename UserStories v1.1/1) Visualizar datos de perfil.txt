@@ -1,4 +1,4 @@
-#User Story Specification: Visualizar datos de perfil.
+﻿#User Story Specification: Visualizar datos de perfil.
 
 ##1.	Description
 
@@ -13,6 +13,11 @@ Como usuario quiero poder visualizar mis datos personales y de perfil para así 
 	- Mail.
 	- Pais.
 	- Fecha de nacimiento.
+	- cantidad de paises visitados
+	- lista de paises visitados
+	- cantidad de Km recorridos
+	- Estado de premium
+	- Estado notificaciones
 - Se debe poder ver todos los viajes hechos.
 - Se debe poder acceder al total de viajes.
 - Si no hay viajes, o no se puede acceder a estos, mostrar el respectivo error.
