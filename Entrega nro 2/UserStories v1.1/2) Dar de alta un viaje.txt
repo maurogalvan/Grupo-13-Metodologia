@@ -1,0 +1,18 @@
+#User Story Specification: Dar de alta un viaje.
+
+##1.	Description
+
+
+Como usuario quiero poder dar de alta un nuevo viaje.
+
+##2.	Acceptance Criteria
+
+- Se debe poder dar de alta un viaje si el usuario ingreso los siguientes parametros
+	-Localidad de partida y de llegada
+	-Vuelo de ida, y de regreso,los datos para crear un vuelo son:
+		-compania proveedora de cada vuelo.
+		-dia de salida de cada uno de los vuelos.
+		-numero de cada vuelo.
+	
+	
+

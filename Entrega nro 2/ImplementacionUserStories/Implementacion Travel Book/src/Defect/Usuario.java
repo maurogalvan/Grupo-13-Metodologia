@@ -7,7 +7,7 @@ import java.util.Calendar;
 /**
  * Esta clase genera un Usuario
  * @author Mauro Galvan
- * @version 1
+ * @version 1.0
  *
  */
 
@@ -22,8 +22,10 @@ public class Usuario {
 	private boolean notificacion;
 	private ArrayList<String> paisesVisitados;
 	private double kmRecorridos;
-	private ArrayList<Viaje> misViajes; //Hay que importar la clase viaje
+	private ArrayList<Viaje> misViajes;
 	private boolean premium;
+	
+	
 	
 	/**
 	 * Constructor de la clase Usuario
@@ -217,14 +219,20 @@ public class Usuario {
 	 * @param vueloVuelta contiene un vuelo de vuelta
 	 */
 	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, 
-			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino) {
+			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino,String descripcion) {
 		
 		TrasladoAereo vueloIda= new TrasladoAereo(numVueloIda, companiaIda, diaIda);
 		TrasladoAereo vueloVuelta= new TrasladoAereo(numVueloVuelta, companiaVuelta, diaVuelta); 
 		String origen= ciudadOrigen;
 		String destino= ciudadDestino;
-		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta);
+		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta, descripcion);
 		misViajes.add(nuevoViaje);
+	}
+	
+	public String toString() {
+		String retorno = "Nombre: "+this.nombre+"\nApellido: "+this.apellido+"\nMail: "+this.mail+"\nPais: "+this.pais+
+				"\nFecha Nacimiento: "+this.nacimiento.get(Calendar.DAY_OF_MONTH)+"/"+this.nacimiento.get(Calendar.MONTH)+"/"+this.nacimiento.get(Calendar.YEAR);
+		return retorno;
 	}
 	
 } //Cierre de clase

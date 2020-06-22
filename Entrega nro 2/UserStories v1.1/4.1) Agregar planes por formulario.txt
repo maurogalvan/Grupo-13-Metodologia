@@ -1,0 +1,20 @@
+#User Story Specification: Agregar planes por formulario.
+
+##1.	Description
+
+Como usuario quiero agregar planes a mi viaje a través de formulario.
+
+##2.	Acceptance Criteria
+
+- Se debe poder añadir un traslado aéreo con estos datos:
+	- Número de vuelo.
+	- Empresa de vuelo.
+	- Fecha de salida.
+- Se debe poder añadir uno o más planes básicos tales como un hotel, un viaje en colectivo, en tren o cualquier otro traslado. Se les debe cargar:
+	- fecha de salida.
+	- Descripción del transporte(ej: colectivo).
+	- Asiento.
+	- Duración.
+	- Fecha de llegada.
+- No se debe permitir agregar un plan con algún formulario vacío.
+- Lograr almacenar el plan del viaje en la base de datos.
