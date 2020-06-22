@@ -1,4 +1,4 @@
-#User Story Specification: Visualizar datos de plan.
+#User Story Specification: Visualizar datos de plan
 
 ##1.	Description
 
@@ -6,12 +6,9 @@ Como usuario quiero poder visualizar los datos de un determinado plan.
 
 ##2.	Acceptance Criteria
 
--Se debe poder crear plan aereo consultando campos restantes a FlightStats
--Se debe poder crear un plan.
--Se debe dar soporte para poder agregar comentarios extras a un plan.
--Para cada planes se debe mostrar:
-	-Nombre del plan.
-	-Descripción del plan.
-	-Horarios de actividades.
-	-Localización de actividades.
-	-Comentarios de un plan.
+- Se debe poder ver cada uno de los datos del usuario.
+- Se debe poder ver todos los viajes hechos.
+- Se debe poder agregar viajes.
+- Se debe poder acceder al total de viajes.
+- Si no hay viajes, o no se puede acceder a estos, mostrar el respectivo error.
+- Los datos a visualizar son los mismos que el usuario ingresa al dar de alta el viaje.
