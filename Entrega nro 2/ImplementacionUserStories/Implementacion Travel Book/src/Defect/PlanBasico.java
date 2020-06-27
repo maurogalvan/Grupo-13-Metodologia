@@ -22,11 +22,6 @@ public class PlanBasico {
         
     }
     
-    public String toString () {
-    	String retorno = "Tipo: "+this.tipo+"\nCoordenadas: "+this.ubicacion+"\nFecha de inicio: "+this.fechainicio.get(Calendar.DAY_OF_MONTH)+"/"+
-    			this.fechainicio.get(Calendar.MONTH)+"/"+this.fechainicio.get(Calendar.YEAR);
-    	return retorno;
-    }
     
     //Getters y setters 
     public Calendar getFechainicio() {

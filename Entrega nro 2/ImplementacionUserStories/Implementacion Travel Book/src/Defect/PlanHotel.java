@@ -1,47 +1,41 @@
 package Defect;
 
+import java.util.Date;
 import java.util.*;
 
 /**
  *
- * @author Jeremias manuel
+ * @author jerel
  */
 public class PlanHotel extends PlanBasico {
     
     private String habitacion;
-    private Calendar fechaFin;
+    private Date fechaFin;
 
        // al constructor de PlanHotel le paso los atributos del padre tambien para usar el constructor con super()
-    public PlanHotel(String habitacion, Calendar fechaFin, Calendar fechainicio, String tipo, String ubicacion) {
+    public PlanHotel(String habitacion, Date fechaFin, Calendar fechainicio, String tipo, String ubicacion) {
         super(fechainicio,tipo,ubicacion);
         this.habitacion = habitacion;
         this.fechaFin = fechaFin;
     }
 
-    public PlanHotel(String habitacion, Calendar fechaFin) {
+    public PlanHotel(String habitacion, Date fechaFin) {
         super();
         this.habitacion = habitacion;
         this.fechaFin = fechaFin;
     }
     
-    public String toString () {
-    	String retorno = super.toString()+
-    			"\nFecha de salida: "+this.fechaFin.get(Calendar.DAY_OF_MONTH)+"/"+
-    			this.fechaFin.get(Calendar.MONTH)+"/"+this.fechaFin.get(Calendar.YEAR)+"\nHabitacion numero: "+this.habitacion;
-    	return retorno;
-    }
 
     public String getHabitacion() {
         return habitacion;
     }
 
-    public Calendar getFechaFin() {
+    public Date getFechaFin() {
         return fechaFin;
     }
     
     public void reenviarEmail(){
         // reenviarEmail.
-    	// Para el proximo sprint
     }
     
 }

@@ -1,4 +1,4 @@
-package Defect;
+package metodologia;
 
 
 import java.util.Calendar;
@@ -18,6 +18,9 @@ public class Viaje {
     private Traslado trasladoVuelta;
     
 
+    
+    
+    
     public Viaje(String origen, String destino, TrasladoAereo vueloIda, TrasladoAereo vueloVuelta) {
 
         this.origen = origen;
@@ -54,16 +57,39 @@ public class Viaje {
     	return retorno;
     }
 
-    public void crearMapa() {
-        Vector<String> ocurrencias = new Vector<String>(); //Es clase gps pero por ahora ponemos Strings
-        for(PlanBasico plan : planes) {
-            ocurrencias.add(plan.getUbicacion());
+    public Mapa crearMapaViaje() {
+        
+        
+        Mapa m = new Mapa();
+        
+        for(int i =0; i < planes.size(); i++)
+        {
+            m.setPunto(planes.get(i).getTipo(), planes.get(i).getUbicacion());
         }
+        
+        return m;
+        
+    }
+    
+    public MapaPremium crearMapaPremium (){
+        
+        MapaPremium m = new MapaPremium();
+        
+     for(int i =0; i< planes.size(); i++)
+     {
+         if(planes.get(i) instanceof TrasladoAereo)
+         {
+              m.setPunto(planes.get(i).getTipo(), planes.get(i).getUbicacion());
+         }
+     }
+     
+     return m;
+        
     }
 
     public Vector<PlanBasico> getPlanes() {
         Vector<PlanBasico> salida = new Vector<PlanBasico>();
-        salida.addAll(planes);
+        salida.addAll(planes); 
 
         return salida;
     }
@@ -103,6 +129,12 @@ public class Viaje {
         this.descripcion = descripcion;
     }
     
+    public boolean equals (Viaje v){
+        
+        return (v.origen.equals(this.origen) && v.destino.equals(this.destino) && v.descripcion.equals(this.descripcion));
+        
+    }
+ 
     
 
 

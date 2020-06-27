@@ -1,4 +1,4 @@
-package Defect;
+package metodologia;
 
 
 import java.util.*;
@@ -40,7 +40,7 @@ public class Usuario {
 	 * @param misViajes Lista de todos los viajes hechos
 	 * @param premium Decisor de si un Usuario es premium o no
 	 */
-	public Usuario(String nombre, String apellido, String mail, String pais,Calendar nacimiento,boolean notificacion) 
+	public Usuario(String nombre, String apellido, String mail, String pais,Calendar nacimiento,boolean notificacion,boolean premium) 
 	{
 		this.nombre=nombre;
 		this.apellido=apellido;
@@ -51,7 +51,7 @@ public class Usuario {
 		this.paisesVisitados= new ArrayList <String> ();
 		this.kmRecorridos=0;
 		this.misViajes= new ArrayList <Viaje>();
-		this.premium=false;
+		this.premium= premium;
 	}
 	
 	/**
@@ -228,6 +228,62 @@ public class Usuario {
 		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta, descripcion);
 		misViajes.add(nuevoViaje);
 	}
+        
+        /**
+         * 
+         * @param viaje
+         * @return Mapa, si return Null controlar error.
+         */
+        
+        public Mapa crearMapa(Viaje viaje) 
+        {
+      
+            if(this.existeViaje(viaje))
+            {
+                Mapa m = viaje.crearMapaViaje();
+                return m;
+            }
+          
+           return null; 
+            
+        }
+        
+         /**
+         * 
+         * @param viaje
+         * @return Mapa, si return Null controlar error.
+         */
+        
+        public MapaPremium crearMapaPremium(Viaje viaje)
+        {
+            if(premium)
+            {
+                if(this.existeViaje(viaje))
+                {
+                    MapaPremium m = viaje.crearMapaPremium();
+                    return m;
+                }
+            }
+           
+            return null;
+        }
+        
+      
+        
+        private boolean existeViaje(Viaje viaje)
+        {
+            int i = 0;
+            
+            while(i < misViajes.size())
+            {
+                if(viaje.equals(misViajes.get(i)))
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
 	
 	public String toString() {
 		String retorno = "Nombre: "+this.nombre+"\nApellido: "+this.apellido+"\nMail: "+this.mail+"\nPais: "+this.pais+
