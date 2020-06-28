@@ -1,9 +1,5 @@
-package Defect;
+package Program;
 
-/**
- *
- * @author jeremias manuel and Mauro Galvan
- */
 public class Coordenada {
     
     private float x;

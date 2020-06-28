@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Vector;
 
-import Defect.*;
+import Program.*;
 
 public class Test {
 
@@ -20,7 +20,7 @@ public class Test {
 		nacimiento.set(1998, 9, 28);
 		
 		//Creo un usuario
-		Usuario user1 = new Usuario("Mauro", "Galvan" , "maurogalvanbalca@gmail.com", "Argentina" ,nacimiento, true);
+		Usuario user1 = new Usuario("Mauro", "Galvan" , "maurogalvanbalca@gmail.com", "Argentina" ,nacimiento, true, false);
 		
 		//Muestro los datos del usuario
 		System.out.println("Datos del usuario: \n");
@@ -55,7 +55,8 @@ public class Test {
 		//Plan Excursion 
 		Calendar fechaInicioPB = Calendar.getInstance();
 		fechaInicioPB.set(2019, 2, 18, 8, 45);
-		PlanBasico planBasico = new PlanBasico(fechaInicioPB, "Excursion", "Zoologico Matrute");
+		Coordenada coordenada = new Coordenada(11,22);
+		PlanBasico planBasico = new PlanBasico(fechaInicioPB, "Excursion", coordenada);
 		
 		//Plan hotel
 		Calendar checkIn = Calendar.getInstance();

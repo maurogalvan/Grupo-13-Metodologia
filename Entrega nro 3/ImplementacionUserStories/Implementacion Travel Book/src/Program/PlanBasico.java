@@ -1,11 +1,8 @@
-package Defect;
+package Program;
 
 import java.util.*;
 
-/**
- *
- * @author Jeremias Manuel
- */
+
 public class PlanBasico {
     
     private Calendar fechainicio;
@@ -18,12 +15,8 @@ public class PlanBasico {
         this.tipo = tipo;
         this.ubicacion = ubicacion;
     }
-    public PlanBasico(){
-        
-    }
     
     
-    //Getters y setters 
     public Calendar getFechainicio() {
         return fechainicio;
     }
@@ -36,5 +29,7 @@ public class PlanBasico {
     public Coordenada getUbicacion() {
         return ubicacion;
     }
+    
+    
     
 }
