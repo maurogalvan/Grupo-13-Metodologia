@@ -1,8 +1,0 @@
-- [X] Retrospective.
-- [ ] Cambios en entregables.
-- [ ] Refinada de user stories.
-- [X] Scrum boar.
-- [ ] Programacion.
-- [ ] Diagrama de clases actualizado.
-- [ ] Diagrama de secuencias.
-- [ ] Diagrama de deployment.
