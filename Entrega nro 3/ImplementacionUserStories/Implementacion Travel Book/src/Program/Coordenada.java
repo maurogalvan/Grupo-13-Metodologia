@@ -6,7 +6,11 @@ public class Coordenada {
     private float y;
     
     
-    
+    /**
+     * 
+     * @param x Coordenada x del mapa
+     * @param y Coordenada y del mapa
+     */
     public Coordenada(float x, float y) {
 		this.x=x;
 		this.y=y;
