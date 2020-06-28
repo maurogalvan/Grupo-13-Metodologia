@@ -1,0 +1,12 @@
+User Story Specification: Visualizar datos plan hotel.
+
+##1.	Description
+
+Como usuario quiero poder ver los datos de un plan hotel correspondiente a mi viaje.
+
+##2.	Acceptance Criteria
+
+- Se debe poder visualizar habitación.
+- Se debe poder visualizar fecha inicio y fin del plan.
+- Se debe poder visualizar el tipo de plan.
+- Se debe poder visualizar la ubicación en la que se lleve a cabo el plan.

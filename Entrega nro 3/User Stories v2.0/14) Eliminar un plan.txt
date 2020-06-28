@@ -1,0 +1,12 @@
+User Story Specification: Eliminar un plan.
+
+##1.	Description
+
+Como usuario quiero poder eleminar un plan perteneciente a un viaje, porque se cancelo o lo quiero suspender.
+
+##2.	Acceptance Criteria
+
+- Debe haber al menos un plan cargado en mi lista de viajes
+- La fecha del plan ingresada debe coincidir con la fecha del plan a eliminar.
+- La fecha de plan debe estar en el rango de tiempo correspondiente a un viaje.
+

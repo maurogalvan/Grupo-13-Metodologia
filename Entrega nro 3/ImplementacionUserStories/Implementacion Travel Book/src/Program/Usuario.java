@@ -20,7 +20,8 @@ public class Usuario {
 	
 	
 
-	public Usuario(String nombre, String apellido, String mail, String pais,Calendar nacimiento,boolean notificacion,boolean premium) 
+	public Usuario(String nombre, String apellido, String mail, String pais,Calendar nacimiento,boolean notificacion,
+			boolean premium) 
 	{
 		this.nombre=nombre;
 		this.apellido=apellido;
@@ -109,9 +110,35 @@ public class Usuario {
 			notificaciones.add(notificacion);
 	}
 	
+	/**Esta funcion se deberia correr todos los dias, ya que deberia controlar en 24 horas.
+	 * Calendar.DATE devuelve el dia actual, mientras que s.getFechaInicioViaje().DAY_OF_MONTH-1 me da el dia del viaje menos 1
+	 * para que un dia antes me de el aviso. 
+	 * 
+	 */
+	public void viajeProximo24horas () {
+		for (Viaje s : this.misViajes) {
+			if(Calendar.DATE==s.getFechaInicioViaje().DAY_OF_MONTH-1) {
+				notificaciones.add("Proximo viaje a: "+ s.getDestino());
+			}
+		}
+	}
+	
+	public void verDatosViaje() {
+		for(Viaje e : this.misViajes) {
+			e.toString();
+		}
+	}
+	
+	public void verDatosPlan(Calendar fechaPlan) {
+		for(Viaje e : this.misViajes)
+			if(e.getFechaInicioViaje().after(fechaPlan) && e.getFechaFinViaje().before(fechaPlan))
+				e.getPlan(fechaPlan).toString();
+	}
+	
 
 	public ArrayList<String> getPaisesVisitados() {
-		return paisesVisitados;
+		ArrayList<String> salida = new ArrayList<String>(this.paisesVisitados);
+		return salida;
 	}
 
 
@@ -121,7 +148,8 @@ public class Usuario {
 	
 
 	public ArrayList<Viaje> getMisViajes() {
-		return misViajes;
+		ArrayList<Viaje> salida = new ArrayList<Viaje>(this.misViajes);
+		return salida;
 	}
 	
 
@@ -266,18 +294,9 @@ public class Usuario {
         
       
         
-        private boolean existeViaje(Viaje viaje)
-        {
-            int i = 0;
-            
-            while(i < misViajes.size())
-            {
-                if(viaje.equals(misViajes.get(i)))
-                {
-                    return true;
-                }
-            }
-            
+        private boolean existeViaje(Viaje viaje) {
+        	if(this.misViajes.contains(viaje))
+        		return true;
             return false;
         }
 	

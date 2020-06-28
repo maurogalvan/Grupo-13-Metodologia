@@ -1,0 +1,11 @@
+#User Story Specification: Visualizar mapas de aeropuertos.
+
+##1.	Description
+
+Como usuario premium quiero visualizar los mapas de los aeropuertos y que se estime el tiempo de caminata a un punto deseado para saber el tiempo estimado.
+
+##2.	Acceptance Criteria
+
+- Se debe verificar que el usuario es premium.
+- Se debe poder generar el mapa de los aeropuertos.
+- Se debe poder generar el tiempo estimado de caminata.

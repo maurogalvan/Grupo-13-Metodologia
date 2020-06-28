@@ -2,8 +2,6 @@ package Program;
 
 import java.util.Calendar;
 
-
-
 public class PlanHotel extends PlanBasico {
     
     private String habitacion;
@@ -33,6 +31,10 @@ public class PlanHotel extends PlanBasico {
 
     public Calendar getFechaFin() {
         return fechaFin;
+    }
+    
+    public String toString() {
+    	return super.toString() + "(Habitacion):" + this.habitacion + "(FechaFin):" + fechaFin.toString();
     }
     
 }

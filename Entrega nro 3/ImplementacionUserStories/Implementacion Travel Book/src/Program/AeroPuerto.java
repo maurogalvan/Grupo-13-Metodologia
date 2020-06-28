@@ -2,7 +2,7 @@ package Program;
 
 import java.util.Vector;
 
-public class AeroPuerto {
+public class Aeropuerto {
 	
 	private String nombre;
 	private Coordenada ubicacion;
@@ -10,7 +10,7 @@ public class AeroPuerto {
 	private Vector<String> infoVuelos = new Vector<String>();
 	private Vector<String> cinta = new Vector<String>();
 	
-	public AeroPuerto(String nombre, Coordenada ubicacion) {
+	public Aeropuerto(String nombre, Coordenada ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 		this.mostradores = false;
@@ -51,6 +51,10 @@ public class AeroPuerto {
 		this.infoVuelos.add(nroVuelo);
 		this.cinta.add(cinta);
 		
+	}
+	
+	public String toString() {
+		return "(Nombre):" + this.nombre + "(Ubicacion):" + this.ubicacion.toString();
 	}
 
 

@@ -31,5 +31,10 @@ public class PlanBasico {
     }
     
     
+    public String toString() {
+    	return "(FechaInicio):" + this.fechainicio + "(Tipo):" + this.tipo + "(Ubicacion):" + this.ubicacion.toString();
+    }
+    
+    
     
 }

@@ -1,0 +1,11 @@
+User Story Specification: Visualizar datos plan basico.
+
+##1.	Description
+
+Como usuario quiero poder ver los datos de mi plan básico (excursiones, visitas guiadas, etc) correspondiente a mi viaje.
+
+##2.	Acceptance Criteria
+
+- Se debe poder visualizar el tipo de plan.
+- se debe poder visualizar la fecha de inicio.
+- se debe poder visualizar la ubicación en la que se lleve a cabo el plan.

@@ -1,0 +1,12 @@
+User Story Specification: Eliminar o cancelar un viaje.
+
+##1.	Description
+
+Como usuario quiero poder eliminar uno de los viajes de mi lista por si este se cancelo, o simplemente no quiero que figure.
+
+##2.	Acceptance Criteria
+
+- Debe haber al menos un viaje cargado por el usuario.
+- El origen del viaje a eliminar debe coincidir con el que el usuario ingrese.
+- El destino del viaje a eliminar debe coincidir con el que el usuario ingrese.
+- La fecha de inicio del viaje a eliminar debe coincidir con la fecha de inicio cargada por el usuario.

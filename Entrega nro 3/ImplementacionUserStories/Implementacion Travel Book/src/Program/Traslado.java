@@ -53,6 +53,9 @@ public class Traslado extends PlanBasico{
 	}
 	
 	
-	
+	public String toString() {
+		return super.toString() + "(FechaLLegada):" + this.fechaLLegada + "(Compania):" + this.compania
+				+ "(Asiento):" + this.asiento + "(Duracion):" + this.duracion;
+	}
       	
 }

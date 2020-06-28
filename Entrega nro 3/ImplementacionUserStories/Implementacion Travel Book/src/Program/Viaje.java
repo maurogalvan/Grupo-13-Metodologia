@@ -10,7 +10,6 @@ public class Viaje {
     private String destino;
     private Calendar fechaInicioViaje;
     private Calendar fechaFinViaje;
-    private float tiempoEscalas;
     private Vector<PlanBasico> planes = new Vector<PlanBasico>();
     private String descripcion;
     private Traslado trasladoIda; 
@@ -27,6 +26,7 @@ public class Viaje {
         this.trasladoIda= vueloIda;
         this.trasladoVuelta = vueloVuelta;
     }
+    
     public Viaje(String origen, String destino, TrasladoAereo vueloIda, TrasladoAereo vueloVuelta, String descripcion) {
 
         this.origen = origen;
@@ -45,7 +45,6 @@ public class Viaje {
     			" A las: "+this.fechaInicioViaje.get(Calendar.HOUR)+":"+this.fechaInicioViaje.get(Calendar.MINUTE)+
     			"\nFecha fin: "+this.fechaFinViaje.get(Calendar.DAY_OF_MONTH)+"/"+this.fechaFinViaje.get(Calendar.MONTH)+"/"+this.fechaFinViaje.get(Calendar.YEAR)+
     			" A las: "+this.fechaFinViaje.get(Calendar.HOUR)+":"+this.fechaFinViaje.get(Calendar.MINUTE)+
-    			"\nTiempo de escala: "+this.tiempoEscalas+
     			"\nDescripcion: "+this.descripcion+
     			"\n"+
     			"\n* Traslado ida: \n"+this.trasladoIda.toString()+
@@ -92,6 +91,14 @@ public class Viaje {
     		if(e.getFechainicio().equals(fechaPlan))
     			planes.remove(e);
     }
+    
+    public PlanBasico getPlan(Calendar fechaPlan) {
+    	if(this.planes != null)
+    		for(PlanBasico e : this.planes)
+    			if(e.getFechainicio().equals(fechaPlan))
+    				return e;
+		return null;
+    }
 
 
     public String getOrigen() {
@@ -110,10 +117,6 @@ public class Viaje {
         return fechaFinViaje;
     }
 
-    public float getTiempoEscalas() {
-        return tiempoEscalas;
-    }
-
     public String getDescripcion() {
         return descripcion;
     }
@@ -123,10 +126,11 @@ public class Viaje {
     }
     
     public boolean equals (Viaje v){
-        
-        return (v.origen.equals(this.origen) && v.destino.equals(this.destino) && v.descripcion.equals(this.descripcion));
-        
+        try {
+        	return (v.origen.equals(this.origen) && v.destino.equals(this.destino) && v.descripcion.equals(this.descripcion));
+        } catch (Exception e) {
+        	return false;
+        }
     }
- 
 
 }

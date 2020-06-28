@@ -1,0 +1,15 @@
+#User Story Specification: Notificar ante alteraciones en plan de vuelo.
+
+##1.	Description
+
+Como usuario premium quiero que se me notifique ante cualquier alteración en el plan de vuelo.
+
+##2.	Acceptance Criteria
+
+- Se debe verificar que el usuario sea premium.
+- Se debe notificar ante un cambio en el asiento de correspondencia.
+- Se debe notificar ante un cambio de aeropuerto de llegada o salida.
+- Se debe notificar ante un cambio aeronave.
+- Se debe notificar un cambio de fecha de salida.
+- Se debe notificar cambio de compañía que provee el vuelo.
+- Se debe notificar duración del vuelo.
