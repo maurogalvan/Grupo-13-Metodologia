@@ -1,4 +1,4 @@
-User Story Specification: Visualizar datos traslado.
+#User Story Specification: Visualizar datos traslado.
 
 ##1.	Description
 
@@ -6,8 +6,9 @@ como usuario quiero visualizar los datos correspondientes a mi traslado para pod
 
 ##2.	Acceptance Criteria
 
-- Debo poder visualizar la compania que provee el transporte.
+- Debo poder visualizar la compañía que provee el transporte.
 - Debo poder visualizar el asiento que me corresponde en el vehículo que me traslade.
 - Debo poder ver un estimativo de la duración del viaje.
 - Debo poder visualizar el tipo de traslado.
 - Debo poder visualizar la ubicación de la cual parte el vehículo que debe trasladarme.
+

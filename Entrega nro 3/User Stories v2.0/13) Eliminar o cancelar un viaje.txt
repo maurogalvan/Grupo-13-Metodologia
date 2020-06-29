@@ -1,8 +1,8 @@
-User Story Specification: Eliminar o cancelar un viaje.
+#User Story Specification: Eliminar o cancelar un viaje.
 
 ##1.	Description
 
-Como usuario quiero poder eliminar uno de los viajes de mi lista por si este se cancelo, o simplemente no quiero que figure.
+Como usuario quiero poder eliminar uno de los viajes de mi lista por si este se canceló, o simplemente no quiero que figure.
 
 ##2.	Acceptance Criteria
 

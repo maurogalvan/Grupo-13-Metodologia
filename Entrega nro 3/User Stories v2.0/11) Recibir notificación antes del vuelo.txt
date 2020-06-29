@@ -1,4 +1,4 @@
-User Story Specification: Recibir notificaciones antes del vuelo.
+#User Story Specification: Recibir notificaciones antes del vuelo.
 
 ##1.	Description
 

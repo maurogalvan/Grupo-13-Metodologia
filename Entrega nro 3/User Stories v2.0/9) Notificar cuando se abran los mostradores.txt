@@ -1,0 +1,13 @@
+#User Story Specification: Notificar cuando se abran los mostradores.
+
+##1.	Description
+
+Como usuario premium quiero que se me notifique cuando estén abiertos los mostradores para realizar el checkin o bagdrop.
+
+##2.	Acceptance Criteria
+
+- La aplicación debe estar conectada con los distintos aeropuertos para poder recibir dicha información (de Mostradores).
+- Se debe verificar que el usuario es premium.
+- Se debe verificar que el usuario tenga notificaciones activadas.
+
+

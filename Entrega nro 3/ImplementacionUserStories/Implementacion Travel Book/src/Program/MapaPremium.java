@@ -2,15 +2,11 @@ package Program;
 
 public class MapaPremium extends Mapa{
 
-	
-    
-    public MapaPremium() {
-		super();
-	}
-
-	public float calcularDistancia(Coordenada posicionActual, String lugar2)
+	public double calcularDistancia(Coordenada posicionActual, String lugar2)
     {
-        return posicionActual.CalcularDistancia(super.getPunto(lugar2));
+		Coordenada coordenada = puntos.get(lugar2);
+		double valor = posicionActual.CalcularDistancia(coordenada);
+        return valor;
     }
     
  

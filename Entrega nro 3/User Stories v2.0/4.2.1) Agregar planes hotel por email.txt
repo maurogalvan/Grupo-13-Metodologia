@@ -2,13 +2,13 @@
 
 ##1.	Description
 
-Como usuario quiero poder añadir planes vía reenvió de Email.
+Como usuario quiero poder añadir planes vía reenvío de Email.
 
 ##2.	Acceptance Criteria
 
 - Debe extraer los datos del plan y cargarlo en la aplicación.
-- Lograr obtener correctamente la información importante del mail que se reenvio.
+- Lograr obtener correctamente la información importante del mail que se reenvío.
 - Cargar en la aplicación la información obtenida del mail.
 - Se debe poder obtener del mail la fecha inicio y fin del plan.
 - Se debe poder obtener del mail la ubicación del hotel.
-- se debe poder obtener del mail la habitacion que corresponde del hotel.
+- se debe poder obtener del mail la habitación que corresponde del hotel.

@@ -2,7 +2,12 @@ package Program;
 
 import java.util.*;
 
+/**
 
+ * Esta clase define un objeto Usuario con sus caracteristicas.
+ * @version: v2.0
+
+ */
 public class Usuario {
 	
 
@@ -73,7 +78,10 @@ public class Usuario {
 	public void setPremium(boolean premium) {
 		this.premium = premium;
 	}
-	
+	/**
+	 * Este metodo devuelve la lista de notificaciones del usurio.
+	 * @return listNotificaciones Devuelve la copia de la lista de notificaciones.
+	 */
 	public ArrayList<String> getNotificaciones(){
 		ArrayList<String> listNotificaciones = this.notificaciones;
 		return listNotificaciones;
@@ -108,7 +116,10 @@ public class Usuario {
 		return notificacion;
 	}
 	
-	
+	/**
+	 * Este metodo agrega notificaciones en la lista de notificaciones
+	 * @param notificacion El parametro es el nombre de la notificion.
+	 */
 	public void addNotificacion(String notificacion) {
 		if(isNotificacion())
 			notificaciones.add(notificacion);
@@ -127,19 +138,28 @@ public class Usuario {
 		}
 	}
 	
+	/**
+	 * Este metodo muestra los datos de un viaje llamando al toString
+	 */
 	public void verDatosViaje() {
 		for(Viaje e : this.misViajes) {
 			e.toString();
 		}
 	}
-	
+	/**
+	 * Este metodo muestras los datos de un plan dado la fecha del plan.
+	 * @param fechaPlan El parametro fechaPlan es una fecha que 
+	 */
 	public void verDatosPlan(Calendar fechaPlan) {
 		for(Viaje e : this.misViajes)
 			if(e.getFechaInicioViaje().after(fechaPlan) && e.getFechaFinViaje().before(fechaPlan))
 				e.getPlan(fechaPlan).toString();
 	}
 	
-
+	/**
+	 * Este metodo devuelve la lista de todos los paises visitados.
+	 * @return salida Retorna una copia de los paises visitados.
+	 */
 	public ArrayList<String> getPaisesVisitados() {
 		ArrayList<String> salida = new ArrayList<String>(this.paisesVisitados);
 		return salida;
@@ -176,6 +196,13 @@ public class Usuario {
 		misViajes.add(nuevoViaje);
 	}
 	
+	
+	/**
+	 * Este metodo elimina un viaje de la lista viajes.
+	 * @param origen Este parametro es el origen del viaje.
+	 * @param destino Este parametro es el destino del viaje.
+	 * @param fechaInicioViaje Este parametro es la fecha de inicio del viaje.
+	 */
 	public void eliminarViaje(String origen, String destino, Calendar fechaInicioViaje) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
@@ -183,7 +210,10 @@ public class Usuario {
 					misViajes.remove(e);
 	}
 	
-	
+	/**
+	 * Este metodo elimina un plan de la lista viajes.
+	 * @param fechaPlan Fecha del plan a eliminar.
+	 */
 	public void eliminarPlan(Calendar fechaPlan) {
 		for(Viaje e : this.misViajes)
 			if(e.getFechaInicioViaje().after(fechaPlan) && e.getFechaFinViaje().before(fechaPlan))
@@ -203,21 +233,20 @@ public class Usuario {
 	}
 	
 	
-	public void cargarPlanHotel(String origen, String destino, Calendar fechaInicioViaje, Calendar fechainicioPlan, 
-			String tipo, Coordenada ubicacion, String habitacion, Calendar fechaFin) {
+	public void cargarPlanHotel(Calendar fechainicioPlan, String tipo, Coordenada ubicacion, String habitacion, Calendar fechaFin) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
-				if((e.getFechaInicioViaje().equals(fechaInicioViaje)) && (e.getOrigen().equals(origen)) && (e.getDestino().equals(destino))) {
+				if(e.getFechaInicioViaje().before(fechainicioPlan)&& e.getFechaFinViaje().after(fechainicioPlan)) {
 					PlanBasico planH = new PlanHotel(habitacion, fechaFin, fechainicioPlan, tipo, ubicacion);
 					e.addPlan(planH);
 				}
 	}
 	
 	
-	public void cargarPlanHoteleMail(String origen, String destino, Calendar fechaInicioViaje) {
+	public void cargarPlanHoteleMail(Calendar fechaInicioViaje) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
-				if((e.getFechaInicioViaje().equals(fechaInicioViaje)) && (e.getOrigen().equals(origen)) && (e.getDestino().equals(destino))) {
+				if(e.getFechaInicioViaje().before(fechaInicioViaje)&& e.getFechaFinViaje().after(fechaInicioViaje)) {
 					PlanBasico planHe = new PlanHotel(this.getMail());
 					e.addPlan(planHe);
 				}
@@ -255,10 +284,7 @@ public class Usuario {
 					Traslado planAereo = new TrasladoAereo(this.getMail());
 					e.addPlan(planAereo);
 				}
-	
-	}
-	
-
+	}	
 	
 	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, 
 			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino,String descripcion) {
@@ -295,6 +321,7 @@ public class Usuario {
                     MapaPremium m = viaje.crearMapaPremium();
                     return m;
                 }
+                return null;
             }
            
             return null;

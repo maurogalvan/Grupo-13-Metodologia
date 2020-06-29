@@ -16,7 +16,7 @@ public class PlanHotel extends PlanBasico {
 
     
     public PlanHotel(String email){ // Se pretende que se mande un email y el mismo vuelve cargado.
-    	super(Calendar.getInstance(), "Hotel", new Coordenada(1,2));
+    	super(Calendar.getInstance(), "Hotel", new Coordenada(287.982,762.213));
     	this.habitacion = "Habitacion 113";
     	this.fechaFin = Calendar.getInstance();
     	email = "Hotel, ubicacion, FechaInicio, FechaFin, Habitacion";

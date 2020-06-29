@@ -1,4 +1,4 @@
-User Story Specification: Visualizar datos traslado aereo.
+#User Story Specification: Visualizar datos traslado aéreo.
 
 ##1.	Description
 
@@ -6,11 +6,12 @@ Como usuario quiero poder visualizar los datos de mi vuelo o traslado aéreo par
 
 ##2.	Acceptance Criteria
 
-- Se debe poder visualizar la compania encargada de nuestro traslado.
+- Se debe poder visualizar la compañía encargada de nuestro traslado.
 - Se debe poder visualizar fecha inicio y fin del traslado.
-- se debe poder ver el tipo y la ubicacion.
+- se debe poder ver el tipo y la ubicación.
 - Se debe poder visualizar el asiento que nos corresponde.
 - Se debe poder ver un tiempo estimado de la duración de vuelo.
-- Se debe poder visualizar el numero de vuelo que corresponde al traslado.
+- Se debe poder visualizar el número de vuelo que corresponde al traslado.
 - Se deben poder visualizar datos del aeropuerto de llegada y salida.
 - Se debe poder visualizar información de la aeronave que nos traslada.
+

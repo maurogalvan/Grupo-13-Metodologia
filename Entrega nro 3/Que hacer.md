@@ -1,0 +1,11 @@
+- [X] Retrospective.
+- [X] Cambios en entregables.
+- [X] Refinada de user stories.
+	-[X] Revision de ortografia.
+	-[X] Revision de criterios de aceptacion.
+- [X] Scrum boar.
+- [X] Programacion de user stories.
+	-[X] Test.
+- [X] Diagrama de clases actualizado.
+- [X] Diagrama de secuencias.
+- [X] Diagrama de deployment.

@@ -2,24 +2,28 @@ package Program;
 
 public class Coordenada {
     
-    private float x;
-    private float y;
+    private double x;
+    private double y;
     
     
     
-    public Coordenada(float x, float y) {
+    public Coordenada(double x, double y) {
 		this.x=x;
 		this.y=y;
     }
 
-	public float CalcularDistancia(Coordenada p1)
+	public double CalcularDistancia(Coordenada p1)
     {
-        
-        return (float) ( Math.sqrt(Math.pow(p1.getX() - x,2) + Math.pow(p1.getY() - y,2)));
+		double p1X = p1.getX() - this.getX();
+		double p1Y = p1.getY() - this.y;
+		double a = Math.pow(p1X, 2);
+		double b = Math.pow(p1Y, 2);
+        double result = Math.sqrt(a + b);
+        return result;
         
     }
 
-    public float getX() {
+    public double getX() {
         return x;
     }
 
@@ -27,7 +31,7 @@ public class Coordenada {
         this.x = x;
     }
 
-    public float getY() {
+    public double getY() {
         return y;
     }
 

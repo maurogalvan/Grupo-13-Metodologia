@@ -7,6 +7,6 @@ Como usuario premium quiero que se me notifique la cinta en la que puedo retirar
 ##2.	Acceptance Criteria
 
 - Se debe verificar que el usuario es premium.
-- Se debe verificar que las notificaciones del usuario esten activas.
+- Se debe verificar que las notificaciones del usuario estén activas.
 - Se debe notificar numero de la cinta.
 - La aplicación debe estar conectada con los distintos aeropuertos para poder recibir dicha información (de equipaje).

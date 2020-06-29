@@ -1,8 +1,8 @@
-User Story Specification: Eliminar un plan.
+#User Story Specification: Eliminar un plan.
 
 ##1.	Description
 
-Como usuario quiero poder eleminar un plan perteneciente a un viaje, porque se cancelo o lo quiero suspender.
+Como usuario quiero poder eliminar un plan perteneciente a un viaje, porque se cancelo o lo quiero suspender.
 
 ##2.	Acceptance Criteria
 

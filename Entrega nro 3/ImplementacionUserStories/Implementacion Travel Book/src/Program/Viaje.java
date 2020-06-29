@@ -59,7 +59,6 @@ public class Viaje {
         for(int i =0; i < planes.size(); i++)
         {
         	m.setPunto(planes.get(i).getTipo(), planes.get(i).getUbicacion());
-            m.setPunto(planes.get(i).getTipo(), planes.get(i).getUbicacion());
         }
         
         return m;
@@ -68,7 +67,7 @@ public class Viaje {
     public MapaPremium crearMapaPremium (){
         MapaPremium m = new MapaPremium();
         for(int i =0; i< planes.size(); i++)
-        	if(planes.get(i) instanceof TrasladoAereo)
+        	if(planes.get(i) instanceof PlanBasico)
         		m.setPunto(planes.get(i).getTipo(), planes.get(i).getUbicacion());
         return m;   
     }

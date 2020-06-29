@@ -15,10 +15,10 @@ public class TrasladoAereo extends Traslado{
     private Usuario user;
     private Vector<TrasladoAereo> escalas = new Vector<TrasladoAereo>();
     
-    
-    protected static final Coordenada coordenada = new Coordenada ((float)41.2891,(float) 2.013);
-    protected static final Coordenada coordenadaLlegada = new Coordenada ((float) 12.31,(float) 345.65);
-    protected static final Coordenada coordenadaSalida = new Coordenada ((float) 876.31,(float) 453.65);
+    //Datos para simular FlightStats
+    protected static final Coordenada coordenada = new Coordenada (41.2891,2.013);
+    protected static final Coordenada coordenadaLlegada = new Coordenada (12.31,345.65);
+    protected static final Coordenada coordenadaSalida = new Coordenada (876.31,453.65);
     
     
     public TrasladoAereo(String nroVuelo, String compania, Calendar fechainicio, Usuario user, Aeropuerto aeroLlegadaTEST,
