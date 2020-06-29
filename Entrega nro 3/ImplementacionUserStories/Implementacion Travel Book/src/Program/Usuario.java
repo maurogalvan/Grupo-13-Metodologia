@@ -74,6 +74,10 @@ public class Usuario {
 		this.premium = premium;
 	}
 	
+	public ArrayList<String> getNotificaciones(){
+		ArrayList<String> listNotificaciones = this.notificaciones;
+		return listNotificaciones;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -187,10 +191,11 @@ public class Usuario {
 	}
 	
 	
-	public void cargarPlanBasico(String origen, String destino, Calendar fechaInicioViaje, Calendar fechainicioPlan, String tipo, Coordenada ubicacion) {
+	public void cargarPlanBasico(Calendar fechainicioPlan, String tipo, Coordenada ubicacion) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
-				if((e.getFechaInicioViaje().equals(fechaInicioViaje)) && (e.getOrigen().equals(origen)) && (e.getDestino().equals(destino))) {
+				if(e.getFechaInicioViaje().before(fechainicioPlan)&& e.getFechaFinViaje().after(fechainicioPlan)){
+				
 					PlanBasico planB = new PlanBasico(fechainicioPlan, tipo, ubicacion);
 					e.addPlan(planB);
 				}
@@ -198,7 +203,8 @@ public class Usuario {
 	}
 	
 	
-	public void cargarPlanHotel(String origen, String destino, Calendar fechaInicioViaje, Calendar fechainicioPlan, String tipo, Coordenada ubicacion, String habitacion, Calendar fechaFin) {
+	public void cargarPlanHotel(String origen, String destino, Calendar fechaInicioViaje, Calendar fechainicioPlan, 
+			String tipo, Coordenada ubicacion, String habitacion, Calendar fechaFin) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
 				if((e.getFechaInicioViaje().equals(fechaInicioViaje)) && (e.getOrigen().equals(origen)) && (e.getDestino().equals(destino))) {
@@ -219,7 +225,8 @@ public class Usuario {
 	}
 	
 	
-	public void cargarTraslado(String origen, String destino, Calendar fechaInicioViaje, Calendar fechainicioPlan, String tipo, Coordenada ubicacion, Calendar fechaLLegada, String compania, String asiento, int duracion) {
+	public void cargarTraslado(String origen, String destino, Calendar fechaInicioViaje, Calendar fechainicioPlan, 
+			String tipo, Coordenada ubicacion, Calendar fechaLLegada, String compania, String asiento, int duracion) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
 				if((e.getFechaInicioViaje().equals(fechaInicioViaje)) && (e.getOrigen().equals(origen)) && (e.getDestino().equals(destino))) {
@@ -230,11 +237,12 @@ public class Usuario {
 	}
 	
 	
-	public void cargarTrasladoAereo(String origen, String destino, Calendar fechaInicioViaje, String nroVuelo, String compania, Calendar fechainicio) {
+	public void cargarTrasladoAereo(String origen, String destino, Calendar fechaInicioViaje, String nroVuelo, 
+			String compania, Calendar fechainicio) {
 		if(this.misViajes != null)
 			for(Viaje e : this.misViajes)
 				if((e.getFechaInicioViaje().equals(fechaInicioViaje)) && (e.getOrigen().equals(origen)) && (e.getDestino().equals(destino))) {
-					Traslado planAereo = new TrasladoAereo(nroVuelo, compania, fechainicio);
+					Traslado planAereo = new TrasladoAereo(nroVuelo, compania, fechainicio,this);
 					e.addPlan(planAereo);
 				}
 	
@@ -255,8 +263,8 @@ public class Usuario {
 	public void cargarDatosViaje (Calendar diaIda, Calendar diaVuelta, String companiaIda, String companiaVuelta, 
 			String numVueloIda, String numVueloVuelta, String ciudadOrigen, String ciudadDestino,String descripcion) {
 		
-		TrasladoAereo vueloIda= new TrasladoAereo(numVueloIda, companiaIda, diaIda);
-		TrasladoAereo vueloVuelta= new TrasladoAereo(numVueloVuelta, companiaVuelta, diaVuelta); 
+		TrasladoAereo vueloIda= new TrasladoAereo(numVueloIda, companiaIda, diaIda,this);
+		TrasladoAereo vueloVuelta= new TrasladoAereo(numVueloVuelta, companiaVuelta, diaVuelta,this); 
 		String origen= ciudadOrigen;
 		String destino= ciudadDestino;
 		Viaje nuevoViaje= new Viaje (origen, destino, vueloIda, vueloVuelta, descripcion);
@@ -302,7 +310,8 @@ public class Usuario {
 	
 	public String toString() {
 		String retorno = "Nombre: "+this.nombre+"\nApellido: "+this.apellido+"\nMail: "+this.mail+"\nPais: "+this.pais+
-				"\nFecha Nacimiento: "+this.nacimiento.get(Calendar.DAY_OF_MONTH)+"/"+this.nacimiento.get(Calendar.MONTH)+"/"+this.nacimiento.get(Calendar.YEAR);
+				"\nFecha Nacimiento: "+this.nacimiento.get(Calendar.DAY_OF_MONTH)+"/"+this.nacimiento.get(Calendar.MONTH)+
+				"/"+this.nacimiento.get(Calendar.YEAR);
 		return retorno;
 	}
 	

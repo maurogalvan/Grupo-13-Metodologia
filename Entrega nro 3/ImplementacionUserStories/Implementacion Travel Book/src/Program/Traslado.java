@@ -54,8 +54,10 @@ public class Traslado extends PlanBasico{
 	
 	
 	public String toString() {
-		return super.toString() + "(FechaLLegada):" + this.fechaLLegada + "(Compania):" + this.compania
-				+ "(Asiento):" + this.asiento + "(Duracion):" + this.duracion;
+		return super.toString() + "\nFecha de LLegada: " + this.fechaLLegada.get(Calendar.DAY_OF_MONTH)+
+				"/"+this.fechaLLegada.get(Calendar.MONTH)+
+				"/"+this.fechaLLegada.get(Calendar.YEAR)
+				+ "\nCompania: " + this.compania+ "\nAsiento: " + this.asiento + "\nDuracion: " + this.duracion+" horas";
 	}
       	
 }

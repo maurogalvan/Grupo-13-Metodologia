@@ -15,19 +15,34 @@ public class TrasladoAereo extends Traslado{
     private Usuario user;
     private Vector<TrasladoAereo> escalas = new Vector<TrasladoAereo>();
     
-    protected static final float x = (float) 41.2891;
-    protected static final float y = (float) 2.074;
-    protected static final Coordenada coordenada = new Coordenada (x,y);
+    
+    protected static final Coordenada coordenada = new Coordenada ((float)41.2891,(float) 2.013);
+    protected static final Coordenada coordenadaLlegada = new Coordenada ((float) 12.31,(float) 345.65);
+    protected static final Coordenada coordenadaSalida = new Coordenada ((float) 876.31,(float) 453.65);
     
     
-    public TrasladoAereo(String nroVuelo, String compania, Calendar fechainicio) {
+    public TrasladoAereo(String nroVuelo, String compania, Calendar fechainicio, Usuario user, Aeropuerto aeroLlegadaTEST,
+    		Aeropuerto aeroSalidaTEST) {
         super(calendar, compania,"A4",12,fechainicio,"trasladoAereo", coordenada);
         
         this.nroVuelo = nroVuelo;
         //Supongo que FlightStats me da los siguientes datos:
-        this.aeropuertoLLegada.setNombre("Barcelona");
-        this.aeropuertoSalida.setNombre("Ezeiza");
+        this.aeropuertoLLegada = aeroLlegadaTEST;
+        this.aeropuertoSalida = aeroSalidaTEST;
         this.infoAeronave = "Boing 737";
+        this.user=user;
+        //Supongo que FlightStats carga la lista de escalas
+    }
+    
+    public TrasladoAereo(String nroVuelo, String compania, Calendar fechainicio, Usuario user) {
+        super(calendar, compania,"A4",12,fechainicio,"trasladoAereo", coordenada);
+        
+        this.nroVuelo = nroVuelo;
+        //Supongo que FlightStats me da los siguientes datos:
+        this.aeropuertoLLegada = new Aeropuerto ("Ezeiza", coordenadaLlegada);
+        this.aeropuertoSalida = new Aeropuerto ("Barcelona", coordenadaSalida);
+        this.infoAeronave = "Boing 737";
+        this.user=user;
         //Supongo que FlightStats carga la lista de escalas
     }
     
@@ -35,16 +50,16 @@ public class TrasladoAereo extends Traslado{
         super(calendar, "AerolineasArg", "A4", 12, calendar, "trasladoAereo", coordenada);
         this.nroVuelo = "365";
         //Supongo que FlightStats me da los siguientes datos:
-        this.aeropuertoLLegada.setNombre("Barcelona");
-        this.aeropuertoSalida.setNombre("Ezeiza");
-        this.infoAeronave = "Boeing 737";
+        this.aeropuertoLLegada = new Aeropuerto("Barcelona", coordenadaLlegada);
+        this.aeropuertoSalida = new Aeropuerto ("Ezeiza", coordenadaSalida);
+        this.infoAeronave = "Boing 737";
         email = "NroVuelo: 365, Aerolinea: AerolineasArg, Asiento: A4, Duracion: 12hs, fechaInicio: 20/03 a las 15hs, AeropuertoSalida: Ezeiza, AeropuertoLlegada: Barcelona";
         // Se retorna el email
     }
     
     public String toString() {
-    	return super.toString() + "(NroVuelo):" + this.nroVuelo + "(AeropuertoLLegada):" + this.aeropuertoLLegada.toString() 
-    		+ "(AeropuertaSalida)" + this.aeropuertoSalida.toString() + "(InfoNave):" + this.infoAeronave;
+    	return super.toString() + "\nNroVuelo: " + this.nroVuelo + "\nAeropuertoLLegada: " + this.aeropuertoLLegada.toString() 
+    		+ "\nAeropuertaSalida: " + this.aeropuertoSalida.toString() + "\nInformacino de Nave: " + this.infoAeronave;
     }
 
     public String getNroVuelo() {
@@ -92,21 +107,24 @@ public class TrasladoAereo extends Traslado{
 	}
 	
 	public void notificarMostradores() {
-		if(this.aeropuertoLLegada.getMosradores())
-			user.addNotificacion("Mostradores Abiertos");
+		if(user.isPremium() && user.isNotificacion()) {
+			if(this.aeropuertoSalida.getMostradores())
+				user.addNotificacion("Mostradores Abiertos del aeropuerto de salida "+aeropuertoSalida.getNombre());
+		}
 	}
 	
 	public void notificarCinta() {
 		String cinta = this.aeropuertoLLegada.getCinta(this.nroVuelo);
+		
 		if(user.isPremium() && user.isNotificacion())
-			user.addNotificacion("Cinta para realizar BagDrop" + cinta);
+			user.addNotificacion("Para vuelo nro: "+this.nroVuelo+" Cinta para realizar BagDrop: " + cinta);
 	}
 	
 
 	public void setAeropuertoLLegada(Aeropuerto aeropuertoLLegada) {
 		this.aeropuertoLLegada = aeropuertoLLegada;
 		if(user.isPremium())
-			user.addNotificacion("Nuevo AeroPuerto LLegada:" + aeropuertoLLegada);
+			user.addNotificacion("Nuevo AeroPuerto LLegada: " + aeropuertoLLegada);
 	}
 
 	public void setAeropuertoSalida(Aeropuerto aeropuertoSalida) {

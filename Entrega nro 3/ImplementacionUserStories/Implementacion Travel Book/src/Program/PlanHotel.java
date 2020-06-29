@@ -34,7 +34,8 @@ public class PlanHotel extends PlanBasico {
     }
     
     public String toString() {
-    	return super.toString() + "(Habitacion):" + this.habitacion + "(FechaFin):" + fechaFin.toString();
+    	return super.toString() + "\nHabitacion: " + this.habitacion + "\nFecha Final: " + this.fechaFin.get(Calendar.DAY_OF_MONTH)+
+    			"/"+this.fechaFin.get(Calendar.DAY_OF_WEEK)+"/"+this.fechaFin.get(Calendar.YEAR);
     }
     
 }

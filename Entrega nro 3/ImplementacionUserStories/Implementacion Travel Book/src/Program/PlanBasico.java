@@ -32,7 +32,8 @@ public class PlanBasico {
     
     
     public String toString() {
-    	return "(FechaInicio):" + this.fechainicio + "(Tipo):" + this.tipo + "(Ubicacion):" + this.ubicacion.toString();
+    	return "Fecha de Inicio:" + this.fechainicio.get(Calendar.DAY_OF_MONTH)+"/"+this.fechainicio.get(Calendar.MONTH)+"/"+this.fechainicio.get(Calendar.YEAR) 
+    + "\nTipo: " + this.tipo + "\nUbicacion: " + this.ubicacion.toString();
     }
     
     

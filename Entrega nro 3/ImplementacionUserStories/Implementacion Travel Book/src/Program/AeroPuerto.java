@@ -28,7 +28,7 @@ public class Aeropuerto {
 		return ubicacion;
 	}
 	
-	public boolean getMosradores() {
+	public boolean getMostradores() {
 		return this.mostradores;
 	}
 	
@@ -54,7 +54,7 @@ public class Aeropuerto {
 	}
 	
 	public String toString() {
-		return "(Nombre):" + this.nombre + "(Ubicacion):" + this.ubicacion.toString();
+		return "\n      Nombre: " + this.nombre + "\n      Ubicacion: " + this.ubicacion.toString();
 	}
 
 
